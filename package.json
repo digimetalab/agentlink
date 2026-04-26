@@ -1,5 +1,5 @@
 {
-  "name": "agentlink",
+  "name": "@digimetalab/agentlink",
   "version": "0.1.0",
   "description": "Universal MCP config sync for AI coding agents — Claude Code, Gemini CLI, OpenCode, Codex",
   "author": "digimetalab",
