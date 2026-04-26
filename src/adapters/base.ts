@@ -1,5 +1,6 @@
 import { MCPConfig } from '../schema/mcp.schema';
-import { fileExists } from '../utils/fs';
+import fs from 'fs/promises';
+import path from 'path';
 
 export abstract class AgentAdapter {
   abstract readonly name: string;
@@ -8,6 +9,12 @@ export abstract class AgentAdapter {
   abstract writeConfig(config: MCPConfig): Promise<void>;
 
   async isInstalled(): Promise<boolean> {
-    return fileExists(this.getConfigPath());
+    const dir = path.dirname(this.getConfigPath());
+    try {
+      const stats = await fs.stat(dir);
+      return stats.isDirectory();
+    } catch {
+      return false;
+    }
   }
 }
