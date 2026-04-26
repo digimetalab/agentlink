@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agentlink.dev/schema/v1.json",
+  "version": "1",
+  "mcpServers": {},
+  "agents": {
+    "include": [
+      "claude",
+      "gemini",
+      "opencode",
+      "codex"
+    ],
+    "autoSync": true
+  }
+}
