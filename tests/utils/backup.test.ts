@@ -33,9 +33,9 @@ describe('BackupManager', () => {
     const agentDir = path.join(testDir, agentName);
     await fs.mkdir(agentDir, { recursive: true });
 
-    // Manually create 12 files with different timestamp names
+    // Manually create 12 files with different timestamp names in the past
     for (let i = 0; i < 12; i++) {
-      const timestamp = `2026-05-09_14-30-${String(i).padStart(2, '0')}`;
+      const timestamp = `2000-01-01_00-00-${String(i).padStart(2, '0')}`;
       const filePath = path.join(agentDir, `${timestamp}.json`);
       await fs.writeFile(filePath, JSON.stringify({ index: i }));
     }
