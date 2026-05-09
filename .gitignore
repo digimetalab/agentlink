@@ -4,6 +4,11 @@ coverage/
 .env
 .DS_Store
 
+# Internal development documents
+docs/
+GEMINI.md
+.agent/
+
 # Graphify artifacts
 graphify-out/
 graphify_*.py
