@@ -3,3 +3,7 @@ dist/
 coverage/
 .env
 .DS_Store
+
+# Graphify artifacts
+graphify-out/
+graphify_*.py
