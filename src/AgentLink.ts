@@ -1,14 +1,18 @@
 import path from 'path';
+import fs from 'fs/promises';
+import { constants } from 'fs';
 import { AgentAdapter } from './adapters/base';
 import { ClaudeAdapter } from './adapters/claude';
 import { GeminiAdapter } from './adapters/gemini';
 import { OpenCodeAdapter } from './adapters/opencode';
 import { CodexAdapter } from './adapters/codex';
 import { AgentLinkConfig, agentlinkSchema } from './schema/agentlink.schema';
-import { MCPServerConfig } from './schema/mcp.schema';
+import { MCPServerConfig, mcpConfigSchema } from './schema/mcp.schema';
 import { readJson, writeJson, fileExists } from './utils/fs';
 import { diffServers, DiffResult } from './utils/diff';
 import { interpolateConfig } from './utils/env';
+import { BackupManager } from './utils/backup';
+import { formatValidationError } from './utils/validation-formatter';
 
 export interface AgentInfo {
   name: string;
@@ -25,9 +29,28 @@ export interface SyncResult {
   failed: string[];
 }
 
+export interface AgentHealth {
+  name: string;
+  isInstalled: boolean;
+  configPath?: string;
+  permissions: {
+    read: boolean;
+    write: boolean;
+  };
+  isValidConfig: boolean;
+  zombies: string[];
+  issues: string[];
+}
+
+export interface DoctorResult {
+  agents: AgentHealth[];
+  localConfigValid: boolean;
+}
+
 export class AgentLink {
   private configPath: string;
   private adapters: AgentAdapter[];
+  private backupManager: BackupManager;
 
   constructor(cwd: string = process.cwd()) {
     this.configPath = path.join(cwd, 'agentlink.json');
@@ -37,6 +60,7 @@ export class AgentLink {
       new OpenCodeAdapter(),
       new CodexAdapter()
     ];
+    this.backupManager = new BackupManager();
   }
 
   async init(): Promise<void> {
@@ -59,10 +83,19 @@ export class AgentLink {
     if (!(await fileExists(this.configPath))) {
       throw new Error(`agentlink.json not found in ${path.dirname(this.configPath)}. Run 'agentlink init' first.`);
     }
-    const data = await readJson<any>(this.configPath);
+    
+    const rawContent = await fs.readFile(this.configPath, 'utf-8');
+    let data: any;
+    try {
+      data = JSON.parse(rawContent);
+    } catch (err: any) {
+      throw new Error(`Failed to parse agentlink.json: ${err.message}`);
+    }
+
     const result = agentlinkSchema.safeParse(data);
     if (!result.success) {
-      throw new Error(`Invalid agentlink.json: ${result.error.message}`);
+      const formattedError = formatValidationError(result.error, rawContent, 'agentlink.json');
+      throw new Error(formattedError);
     }
     return result.data;
   }
@@ -102,6 +135,10 @@ export class AgentLink {
       try {
         if (!options.dryRun) {
           const agentConfig = await adapter.readConfig();
+          // Create a deep clone for backup to avoid mutation issues
+          const backupConfig = JSON.parse(JSON.stringify(agentConfig));
+          await this.backupManager.createBackup(adapter.name, backupConfig);
+          
           agentConfig.mcpServers = interpolatedServers;
           await adapter.writeConfig(agentConfig);
         }
@@ -170,5 +207,74 @@ export class AgentLink {
       }
     }
     return diffs;
+  }
+
+  async doctor(): Promise<DoctorResult> {
+    let localConfigValid = true;
+    let localServers: string[] = [];
+    try {
+      const config = await this.readLocalConfig();
+      localServers = Object.keys(config.mcpServers || {});
+    } catch {
+      localConfigValid = false;
+    }
+
+    const agentHealths: AgentHealth[] = [];
+
+    for (const adapter of this.adapters) {
+      const configPath = adapter.getConfigPath();
+      const isInstalled = await adapter.isInstalled();
+      
+      const health: AgentHealth = {
+        name: adapter.name,
+        isInstalled,
+        configPath,
+        permissions: { read: false, write: false },
+        isValidConfig: false,
+        zombies: [],
+        issues: []
+      };
+
+      if (isInstalled) {
+        // Check permissions
+        try {
+          await fs.access(configPath, constants.R_OK);
+          health.permissions.read = true;
+        } catch {
+          health.issues.push('No read permission');
+        }
+
+        try {
+          await fs.access(configPath, constants.W_OK);
+          health.permissions.write = true;
+        } catch {
+          health.issues.push('No write permission');
+        }
+
+        // Read and validate config
+        if (health.permissions.read) {
+          try {
+            const data = await readJson<any>(configPath);
+            const result = mcpConfigSchema.safeParse(data);
+            if (result.success) {
+              health.isValidConfig = true;
+              const agentServers = Object.keys(result.data.mcpServers || {});
+              health.zombies = agentServers.filter(s => !localServers.includes(s));
+            } else {
+              health.issues.push(`Invalid config format: ${result.error.message}`);
+            }
+          } catch (err: any) {
+            health.issues.push(`Failed to read config: ${err.message}`);
+          }
+        }
+      }
+
+      agentHealths.push(health);
+    }
+
+    return {
+      agents: agentHealths,
+      localConfigValid
+    };
   }
 }

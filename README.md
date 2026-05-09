@@ -73,12 +73,13 @@ npx agentlink status
 | `agentlink init` | Initialize `agentlink.json` in current directory |
 | `agentlink sync` | Sync MCP config to all detected agents |
 | `agentlink sync --agents claude,gemini` | Sync to specific agents only |
-| `agentlink add <mcp-server>` | Add an MCP server and sync |
+| `agentlink add <name> --command <cmd> [--env K=V,...]` | Add an MCP server with optional env vars and sync |
 | `agentlink remove <mcp-server>` | Remove an MCP server and sync |
 | `agentlink list` | List all configured MCP servers |
 | `agentlink status` | Show all linked agents and their config paths |
 | `agentlink pull` | Pull config from a specific agent as source of truth |
 | `agentlink diff` | Show config differences between agents |
+| `agentlink doctor` | Run comprehensive health check and zombie detection |
 
 ---
 
@@ -124,6 +125,45 @@ npx agentlink status
   }
 }
 ```
+
+---
+
+## Advanced Usage
+
+### Environment Variable Interpolation
+
+AgentLink supports environment variable interpolation in your `agentlink.json`. This allows you to share configurations without committing sensitive secrets like API keys.
+
+Use the `${VAR_NAME}` or `${VAR_NAME:-default_value}` syntax:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+**Security Benefit:** When syncing, AgentLink replaces these placeholders with actual values from your local environment. Raw secrets are **never** written to `agentlink.json`, keeping your repository safe.
+
+### Health Check (Doctor)
+
+If you're experiencing issues with sync or permissions, run the `doctor` command:
+
+```bash
+agentlink doctor
+```
+
+This will perform a comprehensive health check, including:
+- Validating your local `agentlink.json`
+- Checking install status and permissions for all supported agents
+- Detecting "zombie" servers (servers defined in an agent's config but missing from `agentlink.json`)
 
 ---
 

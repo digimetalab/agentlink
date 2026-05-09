@@ -1,0 +1,134 @@
+{
+  "D:\\Projects\\vibe\\agentlink\\graphify_ast.py": {
+    "mtime": 1778317547.1617274,
+    "hash": "b0d50fdf4ad00457ae334e65f3ae4620"
+  },
+  "D:\\Projects\\vibe\\agentlink\\graphify_build.py": {
+    "mtime": 1778317658.8640854,
+    "hash": "2b1ed2e62c2492173c97630b22fcb43f"
+  },
+  "D:\\Projects\\vibe\\agentlink\\graphify_init.py": {
+    "mtime": 1778317520.1999254,
+    "hash": "9dc3f5d95e2a3f71bf2b2e2c215c5637"
+  },
+  "D:\\Projects\\vibe\\agentlink\\graphify_list_communities.py": {
+    "mtime": 1778317676.6615033,
+    "hash": "c5c15251d9eac1e65cc0d62bf422d207"
+  },
+  "D:\\Projects\\vibe\\agentlink\\graphify_merge.py": {
+    "mtime": 1778317634.1070583,
+    "hash": "d29c8004a4c8f2d1201bf226f8363ff3"
+  },
+  "D:\\Projects\\vibe\\agentlink\\graphify_relabel.py": {
+    "mtime": 1778317690.0873733,
+    "hash": "7346b3ba41d1c22624e9a93d9348ffb1"
+  },
+  "D:\\Projects\\vibe\\agentlink\\tsup.config.ts": {
+    "mtime": 1777193113.7823293,
+    "hash": "2f0bff601f11abfb4c81fbff4214e781"
+  },
+  "D:\\Projects\\vibe\\agentlink\\vitest.config.ts": {
+    "mtime": 1777193114.990424,
+    "hash": "3701d6e1a5218a6393785dae76a27f95"
+  },
+  "D:\\Projects\\vibe\\agentlink\\bin\\agentlink.js": {
+    "mtime": 1777196626.9130259,
+    "hash": "4f61692115d72e18448edd6fc625e33e"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\AgentLink.ts": {
+    "mtime": 1778319379.3131976,
+    "hash": "b6ad34b22a1b3e85aec59d929257f084"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\cli.ts": {
+    "mtime": 1778319227.1931164,
+    "hash": "663d3df26f0c5622600a12aa3f611287"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\index.ts": {
+    "mtime": 1777193879.6703472,
+    "hash": "49fbbba8b9ff20389e369cf71f0bd9be"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\adapters\\base.ts": {
+    "mtime": 1778318108.4664905,
+    "hash": "0b0abd953f8346836d70b13806ba6576"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\adapters\\claude.ts": {
+    "mtime": 1778318031.8673491,
+    "hash": "237b59b49462d8e4e8e4415c894b1820"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\adapters\\codex.ts": {
+    "mtime": 1778318031.8673491,
+    "hash": "f64577e067a9d7ce00476bccde16039c"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\adapters\\gemini.ts": {
+    "mtime": 1778318031.8673491,
+    "hash": "862be590b341c673c0a3ac06da496ce1"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\adapters\\opencode.ts": {
+    "mtime": 1778318031.8673491,
+    "hash": "0e4abf81eae04702681ec3ecec8752e5"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\schema\\agentlink.schema.ts": {
+    "mtime": 1777193272.9437888,
+    "hash": "35e4c704c26454b9937f1bdaa98abc48"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\schema\\mcp.schema.ts": {
+    "mtime": 1777193271.7554882,
+    "hash": "451fba422c4f0a3d1c8079dda179454a"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\utils\\backup.ts": {
+    "mtime": 1778318939.041559,
+    "hash": "d76fe3e3f47e85223188011d4fe3f929"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\utils\\diff.ts": {
+    "mtime": 1777193170.231318,
+    "hash": "b752b8f6860b4eacf69731f9ebdd5363"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\utils\\env.ts": {
+    "mtime": 1778318012.4120321,
+    "hash": "999d47523cdf95d153836536189ec8d6"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\utils\\fs.ts": {
+    "mtime": 1778317982.579171,
+    "hash": "c5f9993ea5c37935780d037537526286"
+  },
+  "D:\\Projects\\vibe\\agentlink\\src\\utils\\validation-formatter.ts": {
+    "mtime": 1778318946.3790956,
+    "hash": "2276238851638893c13fcbb9a7cbb081"
+  },
+  "D:\\Projects\\vibe\\agentlink\\tests\\AgentLink.test.ts": {
+    "mtime": 1778319411.2801998,
+    "hash": "1926363718089f844435d338163b9dac"
+  },
+  "D:\\Projects\\vibe\\agentlink\\tests\\adapters\\claude.test.ts": {
+    "mtime": 1777193418.2555766,
+    "hash": "a16c1944a546beb0e56d93f5d4d3a530"
+  },
+  "D:\\Projects\\vibe\\agentlink\\tests\\utils\\backup.test.ts": {
+    "mtime": 1778318805.0872884,
+    "hash": "7f985667038be2e77e93701d588d4f7e"
+  },
+  "D:\\Projects\\vibe\\agentlink\\tests\\utils\\validation-formatter.test.ts": {
+    "mtime": 1778318838.5519936,
+    "hash": "3d9588dae7c23522360aa3699050c3eb"
+  },
+  "D:\\Projects\\vibe\\agentlink\\CHANGELOG.md": {
+    "mtime": 1777196765.2258973,
+    "hash": "3cf839e30f50afe6a8ec65423cf9d383"
+  },
+  "D:\\Projects\\vibe\\agentlink\\GEMINI.md": {
+    "mtime": 1778287632.032572,
+    "hash": "ff0d8450f9244bb866a8ef6a8c0444ee"
+  },
+  "D:\\Projects\\vibe\\agentlink\\README.md": {
+    "mtime": 1778319478.5619638,
+    "hash": "05d40412642b6e2c27e6e3863c184611"
+  },
+  "D:\\Projects\\vibe\\agentlink\\docs\\superpowers\\plans\\2026-05-09-pretty-errors-docs.md": {
+    "mtime": 1778319367.3213482,
+    "hash": "c01d9e29b098676dbd24275b2dbff00f"
+  },
+  "D:\\Projects\\vibe\\agentlink\\docs\\superpowers\\specs\\2026-05-09-agentlink-enhancements-phase2.md": {
+    "mtime": 1778318626.445264,
+    "hash": "d0852a1a91da5999d4a36ee6754b3b1e"
+  }
+}

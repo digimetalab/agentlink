@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import readline from 'readline';
-import { AgentLink } from './AgentLink';
+import { AgentLink, DoctorResult } from './AgentLink';
 import { MCPServerConfig } from './schema/mcp.schema';
 
 const program = new Command();
@@ -12,6 +12,44 @@ program
   .name('agentlink')
   .description('Universal MCP config sync for AI coding agents')
   .version('0.1.0');
+
+function printDoctorResult(result: DoctorResult) {
+  console.log(chalk.cyan('\nAgentLink Doctor - Health Check\n'));
+
+  if (!result.localConfigValid) {
+    console.log(chalk.red('❌ Local agentlink.json is missing or invalid!'));
+  } else {
+    console.log(chalk.green('✅ Local agentlink.json is healthy.'));
+  }
+
+  console.log();
+
+  for (const agent of result.agents) {
+    const statusIcon = agent.isInstalled
+      ? (agent.issues.length === 0 && agent.zombies.length === 0 ? chalk.green('✅') : (agent.issues.length > 0 ? chalk.red('❌') : chalk.yellow('⚠️')))
+      : chalk.dim('⚪');
+    
+    const statusText = agent.isInstalled
+      ? (agent.issues.length === 0 && agent.zombies.length === 0 ? chalk.green('Healthy') : (agent.issues.length > 0 ? chalk.red('Issues Found') : chalk.yellow('Warnings')))
+      : chalk.dim('Not Detected');
+
+    console.log(`${statusIcon} ${chalk.bold(agent.name.toUpperCase())}: ${statusText}`);
+    
+    if (agent.isInstalled) {
+      console.log(chalk.dim(`   Path: ${agent.configPath}`));
+      
+      if (agent.issues.length > 0) {
+        agent.issues.forEach(issue => console.log(chalk.red(`   - Issue: ${issue}`)));
+      }
+      
+      if (agent.zombies.length > 0) {
+        console.log(chalk.yellow(`   - Zombie Servers: ${agent.zombies.join(', ')}`));
+        console.log(chalk.dim('     (Found in agent config but not in agentlink.json)'));
+      }
+    }
+    console.log();
+  }
+}
 
 program.command('init')
   .description('Scaffold agentlink.json in cwd with smart defaults')
@@ -172,6 +210,20 @@ program.command('diff')
       }
     } catch (err: any) {
       console.error(chalk.red(err.message));
+      process.exit(1);
+    }
+  });
+
+program.command('doctor')
+  .description('Comprehensive health check and zombie server detection')
+  .action(async () => {
+    const spinner = ora('Running health check...').start();
+    try {
+      const result = await agentLink.doctor();
+      spinner.stop();
+      printDoctorResult(result);
+    } catch (err: any) {
+      spinner.fail(chalk.red(err.message));
       process.exit(1);
     }
   });
@@ -422,6 +474,16 @@ async function startREPL() {
           break;
         }
 
+        case '/doctor': {
+          const spinnerDoctor = ora('Running health check...').start();
+          try {
+            const result = await agentLink.doctor();
+            spinnerDoctor.stop();
+            printDoctorResult(result);
+          } catch (e: any) { spinnerDoctor.fail(chalk.red(e.message)); }
+          break;
+        }
+
         case '/exit':
         case '/quit':
           rl.close();
@@ -437,6 +499,7 @@ async function startREPL() {
           console.log(`  ${chalk.magenta('/list')}                               List configured MCP servers`);
           console.log(`  ${chalk.magenta('/status')}                             Show detected agents`);
           console.log(`  ${chalk.magenta('/diff')}                               Show configuration differences`);
+          console.log(`  ${chalk.magenta('/doctor')}                             Run health check`);
           console.log(`  ${chalk.magenta('/help')}                               Show this help menu`);
           console.log(`  ${chalk.magenta('/exit')}                               Close agentlink`);
           break;
