@@ -1,6 +1,18 @@
 export function interpolateEnv(value: string): string {
-  return value.replace(/\${([^}]+)}/g, (_, envVar) => {
-    return process.env[envVar] ?? '';
+  return value.replace(/\${([^}]+)}/g, (_, envVarWithDefault) => {
+    const [envVar, defaultValue] = envVarWithDefault.split(':-');
+    const result = process.env[envVar.trim()];
+    
+    if (result !== undefined) {
+      return result;
+    }
+    
+    if (defaultValue !== undefined) {
+      return defaultValue.trim();
+    }
+    
+    console.warn(`[AgentLink] Warning: Environment variable '${envVar}' is not defined and has no default value.`);
+    return '';
   });
 }
 

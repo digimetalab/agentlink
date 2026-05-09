@@ -1,0 +1,2817 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "sync_workflow",
+        "label": "Sync Workflow",
+        "nodes": [
+          "agentlink_readlocalconfig",
+          "env_interpolateconfig",
+          "agentlink_sync"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "src/AgentLink.ts"
+      },
+      {
+        "id": "mcp_adapters",
+        "label": "MCP Adapters",
+        "nodes": [
+          "claude_claudeadapter",
+          "gemini_geminiadapter",
+          "opencode_opencodeadapter",
+          "codex_codexadapter"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/AgentLink.ts"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "graphify_init.py",
+      "file_type": "code",
+      "source_file": "graphify_init.py",
+      "source_location": "L1",
+      "id": "graphify_init_py",
+      "community": 11,
+      "norm_label": "graphify_init.py"
+    },
+    {
+      "label": "tsup.config.ts",
+      "file_type": "code",
+      "source_file": "tsup.config.ts",
+      "source_location": "L1",
+      "id": "tsup_config_ts",
+      "community": 12,
+      "norm_label": "tsup.config.ts"
+    },
+    {
+      "label": "vitest.config.ts",
+      "file_type": "code",
+      "source_file": "vitest.config.ts",
+      "source_location": "L1",
+      "id": "vitest_config_ts",
+      "community": 13,
+      "norm_label": "vitest.config.ts"
+    },
+    {
+      "label": "agentlink.js",
+      "file_type": "code",
+      "source_file": "bin/agentlink.js",
+      "source_location": "L1",
+      "id": "bin_agentlink_js",
+      "community": 14,
+      "norm_label": "agentlink.js"
+    },
+    {
+      "label": "AgentLink.ts",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L1",
+      "id": "src_agentlink_ts",
+      "community": 0,
+      "norm_label": "agentlink.ts"
+    },
+    {
+      "label": "AgentInfo",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L13",
+      "id": "src_agentlink_agentinfo",
+      "community": 0,
+      "norm_label": "agentinfo"
+    },
+    {
+      "label": "SyncOptions",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L18",
+      "id": "src_agentlink_syncoptions",
+      "community": 0,
+      "norm_label": "syncoptions"
+    },
+    {
+      "label": "SyncResult",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L23",
+      "id": "src_agentlink_syncresult",
+      "community": 0,
+      "norm_label": "syncresult"
+    },
+    {
+      "label": "AgentLink",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L28",
+      "id": "src_agentlink_agentlink",
+      "community": 2,
+      "norm_label": "agentlink"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L32",
+      "id": "src_agentlink_agentlink_constructor",
+      "community": 2,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".init()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L42",
+      "id": "src_agentlink_agentlink_init",
+      "community": 3,
+      "norm_label": ".init()"
+    },
+    {
+      "label": ".readLocalConfig()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L58",
+      "id": "src_agentlink_agentlink_readlocalconfig",
+      "community": 2,
+      "norm_label": ".readlocalconfig()"
+    },
+    {
+      "label": ".detectAgents()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L65",
+      "id": "src_agentlink_agentlink_detectagents",
+      "community": 2,
+      "norm_label": ".detectagents()"
+    },
+    {
+      "label": ".sync()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L78",
+      "id": "src_agentlink_agentlink_sync",
+      "community": 2,
+      "norm_label": ".sync()"
+    },
+    {
+      "label": ".addServer()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L111",
+      "id": "src_agentlink_agentlink_addserver",
+      "community": 2,
+      "norm_label": ".addserver()"
+    },
+    {
+      "label": ".removeServer()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L120",
+      "id": "src_agentlink_agentlink_removeserver",
+      "community": 2,
+      "norm_label": ".removeserver()"
+    },
+    {
+      "label": ".listServers()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L129",
+      "id": "src_agentlink_agentlink_listservers",
+      "community": 2,
+      "norm_label": ".listservers()"
+    },
+    {
+      "label": ".pull()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L134",
+      "id": "src_agentlink_agentlink_pull",
+      "community": 2,
+      "norm_label": ".pull()"
+    },
+    {
+      "label": ".diff()",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L153",
+      "id": "src_agentlink_agentlink_diff",
+      "community": 2,
+      "norm_label": ".diff()"
+    },
+    {
+      "label": "cli.ts",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L1",
+      "id": "src_cli_ts",
+      "community": 1,
+      "norm_label": "cli.ts"
+    },
+    {
+      "label": "program",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L8",
+      "id": "src_cli_program",
+      "community": 1,
+      "norm_label": "program"
+    },
+    {
+      "label": "agentLink",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L9",
+      "id": "src_cli_agentlink",
+      "community": 1,
+      "norm_label": "agentlink"
+    },
+    {
+      "label": "spinner",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L19",
+      "id": "src_cli_spinner",
+      "community": 1,
+      "norm_label": "spinner"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L60",
+      "id": "src_cli_config",
+      "community": 1,
+      "norm_label": "config"
+    },
+    {
+      "label": "keys",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L91",
+      "id": "src_cli_keys",
+      "community": 1,
+      "norm_label": "keys"
+    },
+    {
+      "label": "tableData",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L113",
+      "id": "src_cli_tabledata",
+      "community": 1,
+      "norm_label": "tabledata"
+    },
+    {
+      "label": "allAgents",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L114",
+      "id": "src_cli_allagents",
+      "community": 1,
+      "norm_label": "allagents"
+    },
+    {
+      "label": "installedNames",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L115",
+      "id": "src_cli_installednames",
+      "community": 1,
+      "norm_label": "installednames"
+    },
+    {
+      "label": "isInstalled",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L118",
+      "id": "src_cli_isinstalled",
+      "community": 1,
+      "norm_label": "isinstalled"
+    },
+    {
+      "label": "info",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L119",
+      "id": "src_cli_info",
+      "community": 1,
+      "norm_label": "info"
+    },
+    {
+      "label": "centerPlain()",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L178",
+      "id": "src_cli_centerplain",
+      "community": 1,
+      "norm_label": "centerplain()"
+    },
+    {
+      "label": "padRight()",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L186",
+      "id": "src_cli_padright",
+      "community": 1,
+      "norm_label": "padright()"
+    },
+    {
+      "label": "drawBanner()",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L191",
+      "id": "src_cli_drawbanner",
+      "community": 1,
+      "norm_label": "drawbanner()"
+    },
+    {
+      "label": "startREPL()",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": "L278",
+      "id": "src_cli_startrepl",
+      "community": 1,
+      "norm_label": "startrepl()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L1",
+      "id": "src_index_ts",
+      "community": 15,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "base.ts",
+      "file_type": "code",
+      "source_file": "src/adapters/base.ts",
+      "source_location": "L1",
+      "id": "src_adapters_base_ts",
+      "community": 3,
+      "norm_label": "base.ts"
+    },
+    {
+      "label": "isInstalled()",
+      "file_type": "code",
+      "source_file": "src/adapters/base.ts",
+      "source_location": "L11",
+      "id": "adapters_base_isinstalled",
+      "community": 3,
+      "norm_label": "isinstalled()"
+    },
+    {
+      "label": "claude.ts",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L1",
+      "id": "src_adapters_claude_ts",
+      "community": 3,
+      "norm_label": "claude.ts"
+    },
+    {
+      "label": "ClaudeAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L7",
+      "id": "adapters_claude_claudeadapter",
+      "community": 6,
+      "norm_label": "claudeadapter"
+    },
+    {
+      "label": ".getConfigPath()",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L10",
+      "id": "adapters_claude_claudeadapter_getconfigpath",
+      "community": 6,
+      "norm_label": ".getconfigpath()"
+    },
+    {
+      "label": ".readConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L14",
+      "id": "adapters_claude_claudeadapter_readconfig",
+      "community": 6,
+      "norm_label": ".readconfig()"
+    },
+    {
+      "label": ".writeConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L26",
+      "id": "adapters_claude_claudeadapter_writeconfig",
+      "community": 6,
+      "norm_label": ".writeconfig()"
+    },
+    {
+      "label": "codex.ts",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L1",
+      "id": "src_adapters_codex_ts",
+      "community": 3,
+      "norm_label": "codex.ts"
+    },
+    {
+      "label": "CodexAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L7",
+      "id": "adapters_codex_codexadapter",
+      "community": 7,
+      "norm_label": "codexadapter"
+    },
+    {
+      "label": ".getConfigPath()",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L10",
+      "id": "adapters_codex_codexadapter_getconfigpath",
+      "community": 7,
+      "norm_label": ".getconfigpath()"
+    },
+    {
+      "label": ".readConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L14",
+      "id": "adapters_codex_codexadapter_readconfig",
+      "community": 7,
+      "norm_label": ".readconfig()"
+    },
+    {
+      "label": ".writeConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L26",
+      "id": "adapters_codex_codexadapter_writeconfig",
+      "community": 7,
+      "norm_label": ".writeconfig()"
+    },
+    {
+      "label": "gemini.ts",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L1",
+      "id": "src_adapters_gemini_ts",
+      "community": 3,
+      "norm_label": "gemini.ts"
+    },
+    {
+      "label": "GeminiAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L7",
+      "id": "adapters_gemini_geminiadapter",
+      "community": 8,
+      "norm_label": "geminiadapter"
+    },
+    {
+      "label": ".getConfigPath()",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L10",
+      "id": "adapters_gemini_geminiadapter_getconfigpath",
+      "community": 8,
+      "norm_label": ".getconfigpath()"
+    },
+    {
+      "label": ".readConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L14",
+      "id": "adapters_gemini_geminiadapter_readconfig",
+      "community": 8,
+      "norm_label": ".readconfig()"
+    },
+    {
+      "label": ".writeConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L26",
+      "id": "adapters_gemini_geminiadapter_writeconfig",
+      "community": 8,
+      "norm_label": ".writeconfig()"
+    },
+    {
+      "label": "opencode.ts",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L1",
+      "id": "src_adapters_opencode_ts",
+      "community": 3,
+      "norm_label": "opencode.ts"
+    },
+    {
+      "label": "OpenCodeAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L7",
+      "id": "adapters_opencode_opencodeadapter",
+      "community": 9,
+      "norm_label": "opencodeadapter"
+    },
+    {
+      "label": ".getConfigPath()",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L10",
+      "id": "adapters_opencode_opencodeadapter_getconfigpath",
+      "community": 9,
+      "norm_label": ".getconfigpath()"
+    },
+    {
+      "label": ".readConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L14",
+      "id": "adapters_opencode_opencodeadapter_readconfig",
+      "community": 9,
+      "norm_label": ".readconfig()"
+    },
+    {
+      "label": ".writeConfig()",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L26",
+      "id": "adapters_opencode_opencodeadapter_writeconfig",
+      "community": 9,
+      "norm_label": ".writeconfig()"
+    },
+    {
+      "label": "agentlink.schema.ts",
+      "file_type": "code",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L1",
+      "id": "src_schema_agentlink_schema_ts",
+      "community": 0,
+      "norm_label": "agentlink.schema.ts"
+    },
+    {
+      "label": "agentlinkSchema",
+      "file_type": "code",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L4",
+      "id": "schema_agentlink_schema_agentlinkschema",
+      "community": 0,
+      "norm_label": "agentlinkschema"
+    },
+    {
+      "label": "AgentLinkConfig",
+      "file_type": "code",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L14",
+      "id": "schema_agentlink_schema_agentlinkconfig",
+      "community": 0,
+      "norm_label": "agentlinkconfig"
+    },
+    {
+      "label": "mcp.schema.ts",
+      "file_type": "code",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L1",
+      "id": "src_schema_mcp_schema_ts",
+      "community": 0,
+      "norm_label": "mcp.schema.ts"
+    },
+    {
+      "label": "mcpServerSchema",
+      "file_type": "code",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L3",
+      "id": "schema_mcp_schema_mcpserverschema",
+      "community": 0,
+      "norm_label": "mcpserverschema"
+    },
+    {
+      "label": "MCPServerConfig",
+      "file_type": "code",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L9",
+      "id": "schema_mcp_schema_mcpserverconfig",
+      "community": 0,
+      "norm_label": "mcpserverconfig"
+    },
+    {
+      "label": "mcpConfigSchema",
+      "file_type": "code",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L11",
+      "id": "schema_mcp_schema_mcpconfigschema",
+      "community": 0,
+      "norm_label": "mcpconfigschema"
+    },
+    {
+      "label": "MCPConfig",
+      "file_type": "code",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L15",
+      "id": "schema_mcp_schema_mcpconfig",
+      "community": 3,
+      "norm_label": "mcpconfig"
+    },
+    {
+      "label": "diff.ts",
+      "file_type": "code",
+      "source_file": "src/utils/diff.ts",
+      "source_location": "L1",
+      "id": "src_utils_diff_ts",
+      "community": 0,
+      "norm_label": "diff.ts"
+    },
+    {
+      "label": "DiffResult",
+      "file_type": "code",
+      "source_file": "src/utils/diff.ts",
+      "source_location": "L1",
+      "id": "utils_diff_diffresult",
+      "community": 0,
+      "norm_label": "diffresult"
+    },
+    {
+      "label": "diffServers()",
+      "file_type": "code",
+      "source_file": "src/utils/diff.ts",
+      "source_location": "L8",
+      "id": "utils_diff_diffservers",
+      "community": 0,
+      "norm_label": "diffservers()"
+    },
+    {
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L1",
+      "id": "src_utils_env_ts",
+      "community": 2,
+      "norm_label": "env.ts"
+    },
+    {
+      "label": "interpolateEnv()",
+      "file_type": "code",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L1",
+      "id": "utils_env_interpolateenv",
+      "community": 2,
+      "norm_label": "interpolateenv()"
+    },
+    {
+      "label": "interpolateConfig()",
+      "file_type": "code",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L7",
+      "id": "utils_env_interpolateconfig",
+      "community": 2,
+      "norm_label": "interpolateconfig()"
+    },
+    {
+      "label": "fs.ts",
+      "file_type": "code",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L1",
+      "id": "src_utils_fs_ts",
+      "community": 3,
+      "norm_label": "fs.ts"
+    },
+    {
+      "label": "fileExists()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L4",
+      "id": "utils_fs_fileexists",
+      "community": 3,
+      "norm_label": "fileexists()"
+    },
+    {
+      "label": "readJson()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L13",
+      "id": "utils_fs_readjson",
+      "community": 3,
+      "norm_label": "readjson()"
+    },
+    {
+      "label": "writeJson()",
+      "file_type": "code",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L18",
+      "id": "utils_fs_writejson",
+      "community": 3,
+      "norm_label": "writejson()"
+    },
+    {
+      "label": "AgentLink.test.ts",
+      "file_type": "code",
+      "source_file": "tests/AgentLink.test.ts",
+      "source_location": "L1",
+      "id": "tests_agentlink_test_ts",
+      "community": 0,
+      "norm_label": "agentlink.test.ts"
+    },
+    {
+      "label": "claude.test.ts",
+      "file_type": "code",
+      "source_file": "tests/adapters/claude.test.ts",
+      "source_location": "L1",
+      "id": "tests_adapters_claude_test_ts",
+      "community": 3,
+      "norm_label": "claude.test.ts"
+    },
+    {
+      "label": "AgentLink",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_agentlink",
+      "community": 4,
+      "norm_label": "agentlink"
+    },
+    {
+      "label": "AgentLink.init",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_init",
+      "community": 16,
+      "norm_label": "agentlink.init"
+    },
+    {
+      "label": "AgentLink.readLocalConfig",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_readlocalconfig",
+      "community": 17,
+      "norm_label": "agentlink.readlocalconfig"
+    },
+    {
+      "label": "AgentLink.detectAgents",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_detectagents",
+      "community": 10,
+      "norm_label": "agentlink.detectagents"
+    },
+    {
+      "label": "AgentLink.sync",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_sync",
+      "community": 5,
+      "norm_label": "agentlink.sync"
+    },
+    {
+      "label": "AgentLink.addServer",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_addserver",
+      "community": 18,
+      "norm_label": "agentlink.addserver"
+    },
+    {
+      "label": "AgentLink.removeServer",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_removeserver",
+      "community": 19,
+      "norm_label": "agentlink.removeserver"
+    },
+    {
+      "label": "AgentLink.listServers",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_listservers",
+      "community": 20,
+      "norm_label": "agentlink.listservers"
+    },
+    {
+      "label": "AgentLink.pull",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_pull",
+      "community": 21,
+      "norm_label": "agentlink.pull"
+    },
+    {
+      "label": "AgentLink.diff",
+      "file_type": "code",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentlink_diff",
+      "community": 5,
+      "norm_label": "agentlink.diff"
+    },
+    {
+      "label": "drawBanner",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "cli_drawbanner",
+      "community": 10,
+      "norm_label": "drawbanner"
+    },
+    {
+      "label": "startREPL",
+      "file_type": "code",
+      "source_file": "src/cli.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "cli_startrepl",
+      "community": 4,
+      "norm_label": "startrepl"
+    },
+    {
+      "label": "AgentAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/base.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "base_agentadapter",
+      "community": 4,
+      "norm_label": "agentadapter"
+    },
+    {
+      "label": "ClaudeAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_claudeadapter",
+      "community": 4,
+      "norm_label": "claudeadapter"
+    },
+    {
+      "label": "GeminiAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gemini_geminiadapter",
+      "community": 4,
+      "norm_label": "geminiadapter"
+    },
+    {
+      "label": "OpenCodeAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "opencode_opencodeadapter",
+      "community": 4,
+      "norm_label": "opencodeadapter"
+    },
+    {
+      "label": "CodexAdapter",
+      "file_type": "code",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "codex_codexadapter",
+      "community": 4,
+      "norm_label": "codexadapter"
+    },
+    {
+      "label": "interpolateEnv",
+      "file_type": "code",
+      "source_file": "src/utils/env.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "env_interpolateenv",
+      "community": 22,
+      "norm_label": "interpolateenv"
+    },
+    {
+      "label": "interpolateConfig",
+      "file_type": "code",
+      "source_file": "src/utils/env.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "env_interpolateconfig",
+      "community": 5,
+      "norm_label": "interpolateconfig"
+    },
+    {
+      "label": "diffServers",
+      "file_type": "code",
+      "source_file": "src/utils/diff.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "diff_diffservers",
+      "community": 5,
+      "norm_label": "diffservers"
+    },
+    {
+      "label": "Adapter Pattern",
+      "file_type": "rationale",
+      "source_file": "src/AgentLink.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Used to support multiple AI agents with different configuration formats and paths through a unified interface.",
+      "id": "adapter_pattern",
+      "community": 4,
+      "norm_label": "adapter pattern"
+    },
+    {
+      "label": "Environment Variable Interpolation",
+      "file_type": "rationale",
+      "source_file": "src/utils/env.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Allows users to use secrets like ${GITHUB_TOKEN} in agentlink.json without committing them, as they are interpolated during the sync process.",
+      "id": "env_interpolation",
+      "community": 5,
+      "norm_label": "environment variable interpolation"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_adapters_base_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_adapters_claude_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "adapters_claude_claudeadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_adapters_gemini_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "adapters_gemini_geminiadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_adapters_opencode_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "adapters_opencode_opencodeadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_adapters_codex_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "adapters_codex_codexadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_schema_agentlink_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "schema_agentlink_schema_agentlinkconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "schema_mcp_schema_mcpserverconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_utils_diff_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_diff_diffservers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_diff_diffresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_utils_env_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "utils_env_interpolateconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_agentlink_agentinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_agentlink_syncoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_agentlink_syncresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_agentlink_ts",
+      "target": "src_agentlink_agentlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_agentlink_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/AgentLink.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_agentlink_test_ts",
+      "target": "src_agentlink_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_detectagents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_addserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_removeserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_listservers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_pull",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink",
+      "target": "src_agentlink_agentlink_diff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_agentlink_agentlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/AgentLink.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_agentlink_test_ts",
+      "target": "src_agentlink_agentlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_init",
+      "target": "utils_fs_fileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_init",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_sync",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_addserver",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_removeserver",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_listservers",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_pull",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_diff",
+      "target": "src_agentlink_agentlink_readlocalconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_readlocalconfig",
+      "target": "utils_fs_fileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_readlocalconfig",
+      "target": "utils_fs_readjson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_sync",
+      "target": "utils_env_interpolateconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_addserver",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_removeserver",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_pull",
+      "target": "utils_fs_fileexists"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_pull",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_diff",
+      "target": "utils_env_interpolateconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "src_agentlink_agentlink_diff",
+      "target": "utils_diff_diffservers"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "schema_mcp_schema_mcpserverconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_program",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_agentlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_spinner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_tabledata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_allagents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_installednames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_isinstalled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_centerplain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_padright",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_drawbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L278",
+      "weight": 1.0,
+      "source": "src_cli_ts",
+      "target": "src_cli_startrepl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "src_cli_drawbanner",
+      "target": "src_cli_centerplain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "src_cli_drawbanner",
+      "target": "src_cli_padright",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cli.ts",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "src_cli_startrepl",
+      "target": "src_cli_drawbanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/base.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_adapters_base_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/base.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_adapters_base_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/base.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_adapters_base_ts",
+      "target": "adapters_base_isinstalled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "src_adapters_base_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "src_adapters_base_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "src_adapters_base_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "src_adapters_base_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_adapters_claude_ts",
+      "target": "adapters_claude_claudeadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/adapters/claude.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_adapters_claude_test_ts",
+      "target": "src_adapters_claude_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter",
+      "target": "adapters_claude_claudeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter",
+      "target": "adapters_claude_claudeadapter_readconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter",
+      "target": "adapters_claude_claudeadapter_writeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/adapters/claude.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_adapters_claude_test_ts",
+      "target": "adapters_claude_claudeadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter_readconfig",
+      "target": "adapters_claude_claudeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter_writeconfig",
+      "target": "adapters_claude_claudeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/claude.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "adapters_claude_claudeadapter_writeconfig",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_adapters_codex_ts",
+      "target": "adapters_codex_codexadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter",
+      "target": "adapters_codex_codexadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter",
+      "target": "adapters_codex_codexadapter_readconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter",
+      "target": "adapters_codex_codexadapter_writeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter_readconfig",
+      "target": "adapters_codex_codexadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter_writeconfig",
+      "target": "adapters_codex_codexadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/codex.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "adapters_codex_codexadapter_writeconfig",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_adapters_gemini_ts",
+      "target": "adapters_gemini_geminiadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter",
+      "target": "adapters_gemini_geminiadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter",
+      "target": "adapters_gemini_geminiadapter_readconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter",
+      "target": "adapters_gemini_geminiadapter_writeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter_readconfig",
+      "target": "adapters_gemini_geminiadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter_writeconfig",
+      "target": "adapters_gemini_geminiadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/gemini.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "adapters_gemini_geminiadapter_writeconfig",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_adapters_opencode_ts",
+      "target": "adapters_opencode_opencodeadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter",
+      "target": "adapters_opencode_opencodeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter",
+      "target": "adapters_opencode_opencodeadapter_readconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter",
+      "target": "adapters_opencode_opencodeadapter_writeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter_readconfig",
+      "target": "adapters_opencode_opencodeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter_writeconfig",
+      "target": "adapters_opencode_opencodeadapter_getconfigpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/opencode.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "adapters_opencode_opencodeadapter_writeconfig",
+      "target": "utils_fs_writejson"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_schema_agentlink_schema_ts",
+      "target": "src_schema_mcp_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_schema_agentlink_schema_ts",
+      "target": "schema_mcp_schema_mcpserverschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_schema_agentlink_schema_ts",
+      "target": "schema_agentlink_schema_agentlinkschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/agentlink.schema.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_schema_agentlink_schema_ts",
+      "target": "schema_agentlink_schema_agentlinkconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_schema_mcp_schema_ts",
+      "target": "schema_mcp_schema_mcpserverschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_schema_mcp_schema_ts",
+      "target": "schema_mcp_schema_mcpserverconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_schema_mcp_schema_ts",
+      "target": "schema_mcp_schema_mcpconfigschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema/mcp.schema.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_schema_mcp_schema_ts",
+      "target": "schema_mcp_schema_mcpconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/diff.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_utils_diff_ts",
+      "target": "utils_diff_diffresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/diff.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_utils_diff_ts",
+      "target": "utils_diff_diffservers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_utils_env_ts",
+      "target": "utils_env_interpolateenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_utils_env_ts",
+      "target": "utils_env_interpolateconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/env.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "utils_env_interpolateconfig",
+      "target": "utils_env_interpolateenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_utils_fs_ts",
+      "target": "utils_fs_fileexists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_utils_fs_ts",
+      "target": "utils_fs_readjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/fs.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_utils_fs_ts",
+      "target": "utils_fs_writejson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/AgentLink.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_agentlink_test_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/adapters/claude.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_adapters_claude_test_ts",
+      "target": "src_utils_fs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_agentlink",
+      "target": "claude_claudeadapter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_agentlink",
+      "target": "gemini_geminiadapter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_agentlink",
+      "target": "opencode_opencodeadapter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_agentlink",
+      "target": "codex_codexadapter"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli.ts",
+      "source": "cli_startrepl",
+      "target": "agentlink_agentlink"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli.ts",
+      "source": "cli_drawbanner",
+      "target": "agentlink_detectagents"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_sync",
+      "target": "env_interpolateconfig"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_diff",
+      "target": "env_interpolateconfig"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts",
+      "source": "agentlink_diff",
+      "target": "diff_diffservers"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/claude.ts",
+      "source": "claude_claudeadapter",
+      "target": "base_agentadapter"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/gemini.ts",
+      "source": "gemini_geminiadapter",
+      "target": "base_agentadapter"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/opencode.ts",
+      "source": "opencode_opencodeadapter",
+      "target": "base_agentadapter"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/adapters/codex.ts",
+      "source": "codex_codexadapter",
+      "target": "base_agentadapter"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/AgentLink.ts",
+      "source": "adapter_pattern",
+      "target": "base_agentadapter"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/utils/env.ts",
+      "source": "env_interpolation",
+      "target": "env_interpolateconfig"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "sync_workflow",
+      "label": "Sync Workflow",
+      "nodes": [
+        "agentlink_readlocalconfig",
+        "env_interpolateconfig",
+        "agentlink_sync"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/AgentLink.ts"
+    },
+    {
+      "id": "mcp_adapters",
+      "label": "MCP Adapters",
+      "nodes": [
+        "claude_claudeadapter",
+        "gemini_geminiadapter",
+        "opencode_opencodeadapter",
+        "codex_codexadapter"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/AgentLink.ts"
+    }
+  ],
+  "built_at_commit": "14652dec8e9fc4248d7ec6444b78630bb12b727b"
+}

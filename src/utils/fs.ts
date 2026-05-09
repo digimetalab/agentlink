@@ -18,5 +18,15 @@ export async function readJson<T>(filePath: string): Promise<T> {
 export async function writeJson(filePath: string, data: any): Promise<void> {
   const dir = path.dirname(filePath);
   await fs.mkdir(dir, { recursive: true });
-  await fs.writeFile(filePath, JSON.stringify(data, null, 2) + '\n', 'utf-8');
+  
+  const tempPath = `${filePath}.${Math.random().toString(36).slice(2)}.tmp`;
+  try {
+    await fs.writeFile(tempPath, JSON.stringify(data, null, 2) + '\n', 'utf-8');
+    await fs.rename(tempPath, filePath);
+  } catch (err) {
+    if (await fileExists(tempPath)) {
+      await fs.unlink(tempPath);
+    }
+    throw err;
+  }
 }

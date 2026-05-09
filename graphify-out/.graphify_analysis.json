@@ -1,0 +1,305 @@
+{
+  "communities": {
+    "0": [
+      "schema_agentlink_schema_agentlinkconfig",
+      "schema_agentlink_schema_agentlinkschema",
+      "schema_mcp_schema_mcpconfigschema",
+      "schema_mcp_schema_mcpserverconfig",
+      "schema_mcp_schema_mcpserverschema",
+      "src_agentlink_agentinfo",
+      "src_agentlink_syncoptions",
+      "src_agentlink_syncresult",
+      "src_agentlink_ts",
+      "src_schema_agentlink_schema_ts",
+      "src_schema_mcp_schema_ts",
+      "src_utils_diff_ts",
+      "tests_agentlink_test_ts",
+      "utils_diff_diffresult",
+      "utils_diff_diffservers"
+    ],
+    "1": [
+      "src_cli_agentlink",
+      "src_cli_allagents",
+      "src_cli_centerplain",
+      "src_cli_config",
+      "src_cli_drawbanner",
+      "src_cli_info",
+      "src_cli_installednames",
+      "src_cli_isinstalled",
+      "src_cli_keys",
+      "src_cli_padright",
+      "src_cli_program",
+      "src_cli_spinner",
+      "src_cli_startrepl",
+      "src_cli_tabledata",
+      "src_cli_ts"
+    ],
+    "2": [
+      "src_agentlink_agentlink",
+      "src_agentlink_agentlink_addserver",
+      "src_agentlink_agentlink_constructor",
+      "src_agentlink_agentlink_detectagents",
+      "src_agentlink_agentlink_diff",
+      "src_agentlink_agentlink_listservers",
+      "src_agentlink_agentlink_pull",
+      "src_agentlink_agentlink_readlocalconfig",
+      "src_agentlink_agentlink_removeserver",
+      "src_agentlink_agentlink_sync",
+      "src_utils_env_ts",
+      "utils_env_interpolateconfig",
+      "utils_env_interpolateenv"
+    ],
+    "3": [
+      "adapters_base_isinstalled",
+      "schema_mcp_schema_mcpconfig",
+      "src_adapters_base_ts",
+      "src_adapters_claude_ts",
+      "src_adapters_codex_ts",
+      "src_adapters_gemini_ts",
+      "src_adapters_opencode_ts",
+      "src_agentlink_agentlink_init",
+      "src_utils_fs_ts",
+      "tests_adapters_claude_test_ts",
+      "utils_fs_fileexists",
+      "utils_fs_readjson",
+      "utils_fs_writejson"
+    ],
+    "4": [
+      "adapter_pattern",
+      "agentlink_agentlink",
+      "base_agentadapter",
+      "claude_claudeadapter",
+      "cli_startrepl",
+      "codex_codexadapter",
+      "gemini_geminiadapter",
+      "opencode_opencodeadapter"
+    ],
+    "5": [
+      "agentlink_diff",
+      "agentlink_sync",
+      "diff_diffservers",
+      "env_interpolateconfig",
+      "env_interpolation"
+    ],
+    "6": [
+      "adapters_claude_claudeadapter",
+      "adapters_claude_claudeadapter_getconfigpath",
+      "adapters_claude_claudeadapter_readconfig",
+      "adapters_claude_claudeadapter_writeconfig"
+    ],
+    "7": [
+      "adapters_codex_codexadapter",
+      "adapters_codex_codexadapter_getconfigpath",
+      "adapters_codex_codexadapter_readconfig",
+      "adapters_codex_codexadapter_writeconfig"
+    ],
+    "8": [
+      "adapters_gemini_geminiadapter",
+      "adapters_gemini_geminiadapter_getconfigpath",
+      "adapters_gemini_geminiadapter_readconfig",
+      "adapters_gemini_geminiadapter_writeconfig"
+    ],
+    "9": [
+      "adapters_opencode_opencodeadapter",
+      "adapters_opencode_opencodeadapter_getconfigpath",
+      "adapters_opencode_opencodeadapter_readconfig",
+      "adapters_opencode_opencodeadapter_writeconfig"
+    ],
+    "10": [
+      "agentlink_detectagents",
+      "cli_drawbanner"
+    ],
+    "11": [
+      "graphify_init_py"
+    ],
+    "12": [
+      "tsup_config_ts"
+    ],
+    "13": [
+      "vitest_config_ts"
+    ],
+    "14": [
+      "bin_agentlink_js"
+    ],
+    "15": [
+      "src_index_ts"
+    ],
+    "16": [
+      "agentlink_init"
+    ],
+    "17": [
+      "agentlink_readlocalconfig"
+    ],
+    "18": [
+      "agentlink_addserver"
+    ],
+    "19": [
+      "agentlink_removeserver"
+    ],
+    "20": [
+      "agentlink_listservers"
+    ],
+    "21": [
+      "agentlink_pull"
+    ],
+    "22": [
+      "env_interpolateenv"
+    ]
+  },
+  "cohesion": {
+    "0": 0.19,
+    "1": 0.16,
+    "2": 0.26,
+    "3": 0.42,
+    "4": 0.36,
+    "5": 0.4,
+    "6": 0.83,
+    "7": 0.83,
+    "8": 0.83,
+    "9": 0.83,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0
+  },
+  "gods": [
+    {
+      "id": "utils_fs_writejson",
+      "label": "writeJson()",
+      "degree": 14
+    },
+    {
+      "id": "src_agentlink_agentlink",
+      "label": "AgentLink",
+      "degree": 13
+    },
+    {
+      "id": "utils_fs_fileexists",
+      "label": "fileExists()",
+      "degree": 9
+    },
+    {
+      "id": "utils_fs_readjson",
+      "label": "readJson()",
+      "degree": 7
+    },
+    {
+      "id": "adapters_claude_claudeadapter",
+      "label": "ClaudeAdapter",
+      "degree": 6
+    },
+    {
+      "id": "schema_mcp_schema_mcpconfig",
+      "label": "MCPConfig",
+      "degree": 6
+    },
+    {
+      "id": "adapters_codex_codexadapter",
+      "label": "CodexAdapter",
+      "degree": 5
+    },
+    {
+      "id": "adapters_gemini_geminiadapter",
+      "label": "GeminiAdapter",
+      "degree": 5
+    },
+    {
+      "id": "adapters_opencode_opencodeadapter",
+      "label": "OpenCodeAdapter",
+      "degree": 5
+    },
+    {
+      "id": "utils_env_interpolateconfig",
+      "label": "interpolateConfig()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Adapter Pattern",
+      "target": "AgentAdapter",
+      "source_files": [
+        "src/AgentLink.ts",
+        "src/adapters/base.ts"
+      ],
+      "confidence": "INFERRED",
+      "relation": "rationale_for",
+      "why": "inferred connection - not explicitly stated in source; peripheral node `Adapter Pattern` unexpectedly reaches hub `AgentAdapter`"
+    },
+    {
+      "source": "AgentLink",
+      "target": "ClaudeAdapter",
+      "source_files": [
+        "src/AgentLink.ts",
+        "src/adapters/claude.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `ClaudeAdapter` unexpectedly reaches hub `AgentLink`"
+    },
+    {
+      "source": "AgentLink",
+      "target": "GeminiAdapter",
+      "source_files": [
+        "src/AgentLink.ts",
+        "src/adapters/gemini.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `GeminiAdapter` unexpectedly reaches hub `AgentLink`"
+    },
+    {
+      "source": "AgentLink",
+      "target": "OpenCodeAdapter",
+      "source_files": [
+        "src/AgentLink.ts",
+        "src/adapters/opencode.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `OpenCodeAdapter` unexpectedly reaches hub `AgentLink`"
+    },
+    {
+      "source": "AgentLink",
+      "target": "CodexAdapter",
+      "source_files": [
+        "src/AgentLink.ts",
+        "src/adapters/codex.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `CodexAdapter` unexpectedly reaches hub `AgentLink`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `AgentLink` connect `Community 2` to `Community 0`, `Community 1`, `Community 3`?",
+      "why": "High betweenness centrality (0.083) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `writeJson()` connect `Community 3` to `Community 0`, `Community 2`, `Community 6`, `Community 7`, `Community 8`, `Community 9`?",
+      "why": "High betweenness centrality (0.061) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ClaudeAdapter` connect `Community 6` to `Community 0`, `Community 3`?",
+      "why": "High betweenness centrality (0.033) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `AgentInfo`, `SyncOptions`, `SyncResult` to the rest of the system?",
+      "why": "29 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

@@ -53,12 +53,20 @@ program.command('add <server-name>')
   .description('Prompt for config, add to agentlink.json and sync')
   .option('--command <cmd>', 'Command to run')
   .option('--args <args>', 'Comma-separated arguments')
+  .option('--env <env>', 'Comma-separated environment variables (KEY=VALUE,...)')
   .action(async (name, options) => {
     const spinner = ora(`Adding server '${name}'...`).start();
     try {
       if (!options.command) throw new Error('--command is required');
       const config: MCPServerConfig = { command: options.command };
       if (options.args) config.args = options.args.split(',').map((a: string) => a.trim());
+      if (options.env) {
+        config.env = {};
+        options.env.split(',').forEach((pair: string) => {
+          const [key, value] = pair.split('=');
+          if (key && value) config.env![key.trim()] = value.trim();
+        });
+      }
       
       await agentLink.addServer(name, config);
       await agentLink.sync();
@@ -353,16 +361,31 @@ async function startREPL() {
         
         case '/add': {
           if (args.length < 3) {
-            console.log(chalk.red('Usage: /add <server-name> <command> [args...]'));
+            console.log(chalk.red('Usage: /add <server-name> <command> [args...] [KEY=VALUE...]'));
             break;
           }
           const name = args[1];
           const command = args[2];
-          const cmdArgs = args.slice(3);
+          const remainingArgs = args.slice(3);
+          
+          const cmdArgs: string[] = [];
+          const envVars: Record<string, string> = {};
+          
+          remainingArgs.forEach(arg => {
+            if (arg.includes('=')) {
+              const [key, value] = arg.split('=');
+              if (key && value) envVars[key] = value;
+            } else {
+              cmdArgs.push(arg);
+            }
+          });
+
           const spinnerAdd = ora(`Adding server '${name}'...`).start();
           try {
             const config: MCPServerConfig = { command };
             if (cmdArgs.length > 0) config.args = cmdArgs;
+            if (Object.keys(envVars).length > 0) config.env = envVars;
+            
             await agentLink.addServer(name, config);
             await agentLink.sync();
             spinnerAdd.succeed(chalk.green(`Server '${name}' added and synced!`));
@@ -408,7 +431,7 @@ async function startREPL() {
           console.log(chalk.cyan('Available Commands:'));
           console.log(`  ${chalk.magenta('/init')}                               Initialize agentlink.json`);
           console.log(`  ${chalk.magenta('/sync [agents...]')}                   Sync to all or specific agents`);
-          console.log(`  ${chalk.magenta('/add <server> <command> [args...]')}   Add a new server and sync`);
+          console.log(`  ${chalk.magenta('/add <server> <command> [args...] [KEY=VALUE...]')}   Add a new server and sync`);
           console.log(`  ${chalk.magenta('/remove <server>')}                    Remove a server and sync`);
           console.log(`  ${chalk.magenta('/pull <agent>')}                       Pull config from a specific agent`);
           console.log(`  ${chalk.magenta('/list')}                               List configured MCP servers`);

@@ -4,7 +4,7 @@ import { ClaudeAdapter } from './adapters/claude';
 import { GeminiAdapter } from './adapters/gemini';
 import { OpenCodeAdapter } from './adapters/opencode';
 import { CodexAdapter } from './adapters/codex';
-import { AgentLinkConfig } from './schema/agentlink.schema';
+import { AgentLinkConfig, agentlinkSchema } from './schema/agentlink.schema';
 import { MCPServerConfig } from './schema/mcp.schema';
 import { readJson, writeJson, fileExists } from './utils/fs';
 import { diffServers, DiffResult } from './utils/diff';
@@ -59,7 +59,12 @@ export class AgentLink {
     if (!(await fileExists(this.configPath))) {
       throw new Error(`agentlink.json not found in ${path.dirname(this.configPath)}. Run 'agentlink init' first.`);
     }
-    return readJson<AgentLinkConfig>(this.configPath);
+    const data = await readJson<any>(this.configPath);
+    const result = agentlinkSchema.safeParse(data);
+    if (!result.success) {
+      throw new Error(`Invalid agentlink.json: ${result.error.message}`);
+    }
+    return result.data;
   }
 
   async detectAgents(): Promise<AgentInfo[]> {
@@ -89,10 +94,10 @@ export class AgentLink {
 
     const result: SyncResult = { synced: [], failed: [] };
 
-    for (const adapter of targetAdapters) {
+    await Promise.all(targetAdapters.map(async (adapter) => {
       if (!(await adapter.isInstalled())) {
         result.failed.push(adapter.name);
-        continue;
+        return;
       }
       try {
         if (!options.dryRun) {
@@ -104,7 +109,8 @@ export class AgentLink {
       } catch (err) {
         result.failed.push(adapter.name);
       }
-    }
+    }));
+
     return result;
   }
 
